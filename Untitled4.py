@@ -12,30 +12,33 @@ class Application(Frame):
         """ Create button, text, and entry widgets. """
         # create instruction label
         Label(self,
-              text="asdfasdfasdf"
+              text="Enter information for a new story"
               ).grid(column=0, row=0, columnspan=2, sticky=W)
         # create instruction labels and entry widgits
         Label(self,
-              text="asdfasdfasdf:"
+              text="Person:"
               ).grid(column=0, row=1, columnspan=1, sticky=W)
         
-        self.ent1 = Entry(self).grid(column=1, row=1, columnspan=2, sticky=W)
+        self.ent1 = Entry(self)
+        self.ent1.grid(column=1, row=1, columnspan=2, sticky=W)
 
         Label(self,
-              text="asdfasdfasdf:"
+              text="Plural Noun:"
               ).grid(column=0, row=2, columnspan=1, sticky=W)
         
-        self.ent2 = Entry(self).grid(column=1, row=2, columnspan=2, sticky=W)
+        self.ent2 = Entry(self)
+        self.ent2.grid(column=1, row=2, columnspan=2, sticky=W)
 
         Label(self,
-              text="asdfasdfasdf:"
+              text="Verb:"
               ).grid(column=0, row=3, columnspan=1, sticky=W)
         
-        self.ent3 = Entry(self).grid(column=1, row=3, columnspan=2, sticky=W)
+        self.ent3 = Entry(self)
+        self.ent3.grid(column=1, row=3, columnspan=2, sticky=W)
 
         # Create label and checkboxes
         Label(self,
-              text="asdfasdfasdf:"
+              text="Adjective(s)"
               ).grid(column=0, row=4, columnspan=1, sticky=W)
 
         self.ch1 = BooleanVar()
@@ -59,7 +62,7 @@ class Application(Frame):
 
         # create label and radiobuttons
         Label(self,
-              text="asdfasdfasdf:"
+              text="Body Part:"
               ).grid(column=0, row=5, columnspan=1, sticky=W)
 
         self.option = StringVar()
@@ -86,9 +89,8 @@ class Application(Frame):
                     command=self.update_text
                     ).grid(column=3, row=5, columnspan=1, sticky=W)
         # create submit button
-        self.submit_bttn = Button(self,
-                                text="Click for story"
-                                ).grid(column=0, row=6, columnspan=1, sticky=W)
+        self.submit_bttn = Button(self, text="Click for story")
+        self.submit_bttn.grid(column=0, row=6, columnspan=1, sticky=W)
 
         # create text widget to display message
         self.results_txt = Text(self, width=40, height=5, wrap=WORD)
